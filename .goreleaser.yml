@@ -24,7 +24,9 @@ builds:
     # is mod_timestamp needed?
     # mod_timestamp: '{{ .CommitTimestamp }}'
 archives:
-  - replacements:
+  - format: binary
+    name_template: "{{ .Binary }}"
+    replacements:
       darwin: Darwin
       linux: Linux
       windows: Windows
